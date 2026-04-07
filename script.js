@@ -1,4 +1,4 @@
-const DB_URL = "https://tinkr.tech/sdb-api/todolist";
+const DB_URL = "https://tinkr.tech/sdb-api/todolist/todolist";
 const API_KEY = "7-6psz6ykJLUF8_2UaER_FBgPbB6Y_jh2bVKPngTMHQ";
 
 function loadTodos() {
