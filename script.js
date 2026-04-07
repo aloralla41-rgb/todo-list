@@ -1,9 +1,9 @@
-const DB_URL = "https://tinkr.tech/sdb-ui/todo%20list/todo%20list";
-const API_KEY = "pykbu6JQvfcuBCZIJ-Ko1SPFWDrOZHK1R_MOTxsOlsE";
+const DB_URL = "https://tinkr.tech/sdb-api/todolist";
+const API_KEY = "7-6psz6ykJLUF8_2UaER_FBgPbB6Y_jh2bVKPngTMHQ";
 
 function loadTodos() {
   fetch(DB_URL, {
-    headers: { "Authorization": API_KEY }
+    headers: { "Authorization": "Bearer " + API_KEY }
   })
   .then(res => res.json())
   .then(data => {
@@ -23,7 +23,7 @@ function addTodo() {
   fetch(DB_URL, {
     method: "POST",
     headers: {
-      "Authorization": API_KEY,
+      "Authorization": "Bearer " + API_KEY,
       "Content-Type": "application/json"
     },
     body: JSON.stringify({ text: text })
